@@ -1,0 +1,103 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: 6.25rem;
+}
+
+header > h1 {
+    font-size: 1.5rem;
+    font-family: 'Tilt Warp', cursive;
+}
+
+header > p {
+    font-size: 1.125rem;
+}
+
+/* TIMELINE */
+
+.wrapper {
+    max-width: 1080px;
+    margin: 32px auto;
+    padding: 0 20px;
+    position: relative;
+    background-color: aquamarine;
+}
+
+.timeline {
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background: black;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+}
+
+.row {
+    position: relative;
+    display: flex;
+}
+
+.left {
+    justify-content: flex-start;
+}
+  
+.right {
+    justify-content: flex-end;
+}
+
+.row > .content {
+    background: #fff;
+    border-radius: 5px;
+    width: calc(50% - 40px);
+    padding: 20px;
+    position: relative;
+}
+
+.row > .content::before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    top: 20px;
+    z-index: 1;
+    transform: rotate(45deg);
+}
+  
+.left > .content::before{
+    right: -7px;
+} 
+
+.right > .content::before{
+    left: -7px;
+}
+
+.row::after {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    right: calc(50% - 13px);
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
