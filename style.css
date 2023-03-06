@@ -18,6 +18,10 @@ body {
     background-color: var(--background-color);
 }
 
+img {
+    object-fit: cover;
+}
+
 /* HEADER */
 
 header {
@@ -155,17 +159,18 @@ header > p {
 .content > img {
     width: 100%;
     height: 110px;
-    background-color: #525C68;
+    background-color: #acb9ca;
 }
 
 .content > h2 {
     margin-top: 12px;
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 700;
 }
 
 .content > p {
-    margin-top: 4px;
+    margin-top: 6px;
+    font-size: 0.875rem;
     color: var(--secondary-color);
 }
 
