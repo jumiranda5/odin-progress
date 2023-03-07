@@ -18,6 +18,7 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     color: var(--main-color);
     background-color: var(--background-color);
+    padding-bottom: 150px;
 }
 
 img {
@@ -47,10 +48,15 @@ header > p {
 
 /* ABOUT */
 
-.about {
+.about,
+.wrapper {
     width: 90%;
-    max-width: 1080px; 
-    margin: 0 auto;   
+    max-width: 450px;
+}
+
+.about {
+    margin: 0 auto;
+    padding: 0 12px;
 }
 
 .github-link {
@@ -73,8 +79,6 @@ header > p {
 /* TIMELINE */
 
 .wrapper {
-    width: 90%;
-    max-width: 1080px;
     margin: 40px auto;
     padding: 0 20px;
     position: relative;
@@ -212,11 +216,12 @@ header > p {
 }
 
 .links > a {
-    padding: 8px 0;
+    padding: 10px 0 6px;
     text-align: center;
     text-decoration: none;
     border-radius: 6px;
     font-weight: 700;
+    font-size: 0.875rem;
 }
 
 .code-link {
