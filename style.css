@@ -272,6 +272,11 @@ header > p {
 
     /* TIMELINE */
     
+    .wrapper {
+        max-width: 1024px;
+        margin: 60px auto;
+    }
+
     .timeline {
         left: 50%;
     }
@@ -303,6 +308,66 @@ header > p {
     
     .row::after {
         right: calc(50% - 13px);
+    }
+    
+}
+
+@media (min-width: 1024px) {
+
+    .row > .content {
+        display: grid;
+        grid-template-columns: 40% 1fr 1fr;
+        gap: 8px 20px;
+    }
+
+    .content > img {
+        width: 100%;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    
+    .content > h2,
+    .content > p {
+        width: 100%;
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    
+    .links {
+        width: 100%;
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
+    .todo > .content > h2,
+    .in-progress > .content > h2,
+    .in-progress > .content > p {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        padding: 0 8px;
+    }
+    
+    
+    .in-progress > .content > h2 {
+        margin-top: -4px;
+    }
+
+    .content > h2 {
+        margin-top: 0;
+        font-size: 1.125rem;
+    }
+    
+    .content > p {
+        margin-top: 0;
+        font-size: 0.95rem;
+    }
+
+    .links {
+        margin-top: 8px;
+    }
+    
+    .links > a {
+        font-size: 0.95rem;
     }
     
 }
