@@ -234,6 +234,15 @@ header > p {
     background-color: var(--main-color);
 }
 
+.code-link:hover {
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.preview-link:hover {
+    background-color: var(--secondary-color);
+}
+
 @media (min-width: 600px) {
 
     /* HEADER */
