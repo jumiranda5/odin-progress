@@ -8,8 +8,10 @@
     font-size: 16px;
     --main-color: #24292F;
     --secondary-color: #525C68;
-    --timeline-dot: 26px;
+    --timeline-dot: 24px;
     --background-color: #fafafa;
+    --done-color: #4CF18E;
+    --in-progress-color: #630A83;
 }
 
 body {
@@ -146,12 +148,20 @@ header > p {
     position: absolute;
     width: var(--timeline-dot);
     height: var(--timeline-dot);
-    right: calc(100% - 13px);
+    right: calc(100% - 12px);
     background-color: var(--background-color);
     border: 3px solid var(--main-color);
     top: 15px;
     border-radius: 50%;
     z-index: 1;
+}
+
+.row.done::after {
+    background-color: var(--done-color);
+}
+
+.row.in-progress::after {
+    background-color: var(--in-progress-color);
 }
 
 /* CONTENT */
@@ -172,6 +182,25 @@ header > p {
     margin-top: 6px;
     font-size: 0.875rem;
     color: var(--secondary-color);
+}
+
+.todo > .content > h2 {
+    margin-top: 2px;
+}
+
+.in-progress > .content > h2 {
+    margin-top: 6px;
+}
+
+.todo > .content > h2,
+.in-progress > .content > h2 {
+    color: var(--secondary-color);
+}
+
+.in-progress > .content > p {
+    margin-top: 2px;
+    color: var(--in-progress-color);
+    font-weight: 700;
 }
 
 .links {
